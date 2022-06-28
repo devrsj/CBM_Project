@@ -1,0 +1,855 @@
+.nav-head
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 1111
+	.nav-wrapper
+		@include display-flex
+		align-items: center
+		.main-logo
+			img
+				width: 110px
+		.nav-menu
+			margin-top: 38px
+			ul
+				margin-bottom: 0
+				.nav-items
+					display: inline-block
+					padding: 10px 10px 38px 10px
+					letter-spacing: 1px
+					cursor: pointer
+
+					&:hover
+						.nav-links
+							&:before
+								width: 100%
+
+					.nav-links
+						color: white
+						font-size: 1rem
+						font-family: $font-heading
+						position: relative
+						padding-bottom: 10px
+
+						&:before
+							content: ''
+							position: absolute
+							bottom: 0
+							left: 0
+							background: white
+							height: 2px
+							width: 0
+							transition: .3s
+
+					&.has-dropdown
+						position: relative
+						&:hover
+							.dropdown-content
+								top: 100%
+								opacity: 1
+								visibility: visible
+
+						.dropdown-content
+							position: absolute
+							top: 80%
+							left: 0
+							background: white
+							padding: 10px 20px
+							width: 100vw
+							transition: .3s
+							opacity: 0
+							visibility: hidden
+							box-shadow: 0 12px 50px 0 rgba(16,13,29,0.25)
+
+							&.big
+								max-width: 1100px
+								left: -300px
+							&.med
+								max-width: 800px
+								left: -250px
+							&.med-sm
+								max-width: 500px
+								left: -100px
+							&.sml
+								max-width: 300px
+								left: 0
+
+							.col
+								border-right: 1px solid $color-lighter
+								&:last-child
+									border-right: none
+
+							ul
+								li
+									&:last-child
+										a
+											border-bottom: none
+
+									a
+										color: $color-primary
+										padding: 8px 0
+										display: block
+
+										border-bottom: 1px solid $color-lighter
+										&:hover
+											font-weight: bold
+.camera_overlayer
+	background: rgba(0,0,0,0.5)
+
+.camera_wrap
+	@media #{$medium-and-up}
+		height: 100vh !important
+#banner-video
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 8
+	pointer-events: none
+	width: 100%
+	height: 100vh
+	overflow: hidden
+	@media #{$medium-and-down}
+		display: none
+
+	&::before
+		content: ''
+		position: absolute
+		height: 100%
+		width: 100%
+		background: rgba(0,0,0,0.5)
+		top: 0
+		left: 0
+		z-index: 9
+
+#banner-video iframe
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 8
+	pointer-events: none
+	width: 100%
+	height: 100vh
+	transform: scale(1.2)
+
+.banner-content
+	position: absolute
+	padding: 30px
+	background: rgba(255,255,255,0.8)
+	top: 50%
+	right: 11%
+	transform: translate(-11% ,-50%)
+	max-width: 500px
+	z-index: 10
+
+	.title
+		font-size: 2rem
+
+	@media #{$small-only}
+		position: absolute
+		padding: 30px
+		background: rgba(255, 255, 255, 0.8)
+		top: 50%
+		left: 50%
+		transform: translate(-50%, 48%)
+		max-width: 500px
+		width: 85%
+.banner
+	.button
+		padding: 12px 25px
+		display: inline-block
+		transition: .3s
+		&.bg-pri
+			background: $color-primary
+			border: 1px solid $color-primary
+			color: white
+			&:hover
+				background: white
+				color: $color-primary
+		&.bg-sec
+			background: $color-secondary
+			border: 1px solid $color-secondary
+			color: white
+			&:hover
+				background: transparent
+				color: $color-secondary
+
+.text-content
+	position: absolute
+	top: 50%
+	left: 20%
+	transform: translate(-20%, -50%)
+	color: white
+	z-index: 10
+	border-left: 3px solid $color-secondary
+	padding-left: 20px
+
+	p
+		font-size: 2rem
+		font-style: italic
+
+	@media #{$small-only}
+		position: absolute
+		text-align: center
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -90%)
+		color: white
+		width: 100%
+		padding: 0 35px
+
+		p
+			font-size: 1.2rem
+		h1
+			font-size: 2rem
+
+.home-cta
+	background: $color-primary
+	div.d-flex
+		@media #{$small-only}
+			flex-wrap: wrap
+	a.d-block
+		color: white
+		@media #{$small-only}
+			margin-bottom: 2rem !important
+			flex: 0 0 50%
+		&:hover
+			opacity: .8
+
+.about-list
+	background: white
+	a
+		color: $color-primary
+		transition: .3s
+		&:hover
+			background: $color-lighter
+		img
+			height: 50px
+			width: 50px
+			object-fit: contain
+
+.home-about
+	background: linear-gradient(white, rgba(255,255,255,0.7) ),url(../img/about-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+	.chairman
+		.img-thumbnail
+			border-radius: 50%
+			height: 100px
+			width: 100px
+			object-fit: cover
+
+	.sign
+		img
+			object-fit: contain
+			width: 200px
+
+.school
+	.list
+		list-style-type: decimal-leading-zero
+		padding-left: 20px
+		li
+			line-height: 35px
+			a
+				color: $color-primary
+				font-weight: bold
+
+				&:hover
+					color: $color-secondary
+
+	.school-card
+		box-shadow: 0 12px 50px 0 rgba(16,13,29,0.25)
+
+.testimonial
+	// background: linear-gradient(to right, transparent ,rgba(255,255,255,0.5) 50%),url(../img/test-bg.jpg)
+	background: url(../img/test-bg.jpg), white
+	background-repeat: no-repeat
+	.test-card
+		.avatar
+			text-align: center
+			img
+				height: 150px
+				width: 150px
+				border-radius: 50%
+				margin: auto
+
+		.text
+			width: 100%
+			max-width: 50%
+			margin: auto
+			position: relative
+
+			@media #{$small-only}
+				max-width: 100%
+
+			&.w-100
+				max-width: 100%
+
+			i
+				position: absolute
+				top: -20px
+				left: 0
+				opacity: .2
+				font-size: 4rem
+
+.student-life
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../img/std-life.jpg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	background-attachment: fixed
+
+	h3
+		font-size: 2rem
+	p
+		font-size: 1.2rem
+
+.home-events
+	.col
+		flex-basis: unset
+		&:nth-child(1)
+			.text
+				background: lighten($color-primary, 15%)
+		&:nth-child(2)
+			.text
+				background: darken($color-secondary, 20%)
+		&:nth-child(3)
+			.text
+				background: #2aaeef
+		&:nth-child(4)
+			.text
+				background: darken(#878ab7,	10%)
+		.event-card
+			box-shadow: 0 12px 50px 0 rgba(16,13,29,0.25)
+			.img-box
+				width: 100%
+				img
+					height: 170px
+			.text
+				color: white
+				h5
+					font-size: 1.2rem
+
+.experience
+	background: linear-gradient(to right, white, lighten($color-primary, 50%))
+
+.home-news
+	background: linear-gradient( rgba(255,255,255,0.4), white ),url(../img/news-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+	.theme-btn
+		max-width: 200px
+		@media #{$small-only}
+			max-width: unset
+
+	.news-each
+		display: flex
+		margin-bottom: 20px
+		@media #{$small-only}
+			display: block
+		.inner-title
+			flex: 0 0 22%
+		.inner-image
+			flex: 0 0 25%
+			.img-box
+				position: relative
+				@media #{$small-only}
+					text-align: right
+
+		.date
+			background: $color-lighter
+			width: 80px
+			padding: 8px
+			position: absolute
+			bottom: -25px
+			left: -50px
+			display: flex
+			align-items: center
+			justify-content: center
+			@media #{$small-only}
+				left: 0
+
+			h2
+				color: $color-secondary
+
+		.inner-desc
+			@media #{$small-only}
+				margin-top: 30px
+
+		&:last-child
+			border: 0
+			margin: 0
+			padding: 0
+		img
+			width: 90%
+			height: 150px
+		.text
+			a
+				font-size: 1.2rem
+				color: black
+
+				&:hover
+					color: $color-primary
+
+.footer
+	box-shadow: 0 0 20px rgba(0,0,0,0.1)
+	background: linear-gradient(rgba(255,255,255,0.7), white ),url(../img/footer-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	.footer-logo
+		img
+			width: 150px
+
+	.footer-list
+		li
+			margin-bottom: 10px
+			a
+				font-weight: 500
+				color: black
+				&:hover
+					color: $color-secondary
+
+.copyright
+	border-top: 1px solid $color-light
+
+.msg-from
+
+	img
+		box-shadow: 0 12px 50px 0 rgba(16,13,29,0.25)
+
+.vision
+	.block-each
+		p
+			&::first-letter
+				color: $color-primary
+				font-size: 1.6rem
+		li
+			margin-bottom: 10px
+
+.team
+	img
+		height: 300px
+	.team-cat
+		padding: 50px 0
+		&:nth-child(even)
+			background: white
+
+.program
+	.nav-tabs
+		border-bottom: none
+		.nav-item
+			margin: 0 5px
+			.nav-link
+				text-transform: capitalize
+				border: none
+				border-radius: 10px
+				color: $color-primary
+				padding: .8rem 1.24rem
+				width: 100%
+				transition: .3s
+				white-space: nowrap
+				&.active, &:hover
+					background: lighten($color-primary, 10%)
+					border: none
+					color: white
+
+.activities
+	.owl-nav
+		position: absolute
+		top: -80px
+		right: 0
+
+		button
+			outline: none
+			margin: 0 10px !important
+			background: none !important
+			color: $color-primary !important
+			padding: 5px
+
+	.tab-content
+		img
+			height: 300px
+			width: 100%
+			object-fit: cover
+			margin-bottom: 20px
+
+		.table
+			th
+				white-space: nowrap
+
+.list
+	list-style-type: decimal-leading-zero
+	padding-left: 20px
+
+	a
+		color: $color-primary
+		display: inline-block
+		padding: 5px 0
+
+		&:hover
+			font-weight: bold
+
+.criteria
+	background: url(../img/test-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.fees, .news-detail
+	.list
+		list-style-type: decimal-leading-zero
+		padding-left: 20px
+
+		a
+			color: $color-primary
+			display: inline-block
+			padding: 5px 0
+
+			&:hover
+				font-weight: bold
+
+.apply-online
+	background: url(../img/apply-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+	.box
+		background: rgba(255,255,255,0.7)
+
+.news
+	.card-img
+		img
+			height: 350px
+
+.contact
+	.lists
+		li
+			margin-bottom: 10px
+		a
+			color: $color-primary
+			display: inline-block
+
+	.subscribe
+		.input-group
+			input
+				height: 50px
+				box-shadow: none
+				outline: none
+				border: none
+				box-shadow: 0 0 10px rgba(0,0,0,0.06)
+
+			.btn
+				position: absolute
+				right: 5px
+				z-index: 3
+				top: 50%
+				transform: translateY(-50%)
+				background: $color-primary
+				color: white
+
+				&:hover
+					background: darken($color-primary, 10%)
+
+#applyNow
+	// z-index: 1111
+	input
+		background: $color-lightest
+
+.nice-select
+	.list
+		width: 100%
+
+.program
+	.apply-now
+		background: rgba(255,255,255,0.4)
+		box-shadow: 0 0 20px lightgrey
+
+.download-each
+	img
+		height: 280px
+		box-shadow: 3px 3px 10px lightgrey
+
+		@media #{$small-only}
+			height: 100%
+
+#popup-modal
+	button
+		background: white
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		display: grid
+		place-items: center
+		text-align: center
+		line-height: 10px
+		border: none
+		outline: none
+
+.fee-table
+	thead
+		th
+			border: none
+			background: #eff8ff
+			opacity: .7
+
+.semester-collapse
+	button
+		background: $color-lighter !important
+		color: black !important
+		border: 1px solid $color-light !important
+		width: 100%
+		text-align: left
+		padding: 12px
+		box-shadow: none !important
+		outline: none
+.video
+	iframe, img
+		width: 100% !important
+		height: 250px !important
+
+.floating-icons
+	position: fixed
+	left: 0
+	top: 50%
+	z-index: 11
+	transform: translateY(-50%)
+
+	.social-icons
+		flex-direction: column
+		a
+			display: flex
+			box-shadow: 0 0 15px rgba(0,0,0,0.2)
+			align-items: center
+			justify-content: space-between
+			white-space: nowrap
+			font-weight: bold
+			min-width: 125px
+			padding: 8px 15px
+			color: white
+			transition: .4s ease-in-out
+			transform: translateX(-80px)
+			&:nth-child(1)
+				background: $color-facebook
+			&:nth-child(2)
+				background: $color-twitter
+			&:nth-child(3)
+				background: $color-google
+			&:hover
+				transform: translateX(0)
+
+.filter-class-nav
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border: none
+	a
+		display: inline-block
+		padding: 10px
+		flex: 0 0 20%
+		text-align: center
+		background: lighten($color-primary, 75%)
+		box-shadow: 0 0 20px rgba(0,0,0,0.05)
+		color: $color-primary
+		transition: .3s
+		&.active, &:hover
+			color: white !important
+			background: $color-primary !important
+			border-color: none
+
+.filter-class11-nav,
+.filter-class12-nav,
+.filter-bachelor-nav,
+.filter-master-nav
+
+	display: flex
+	align-items: center
+	justify-content: center
+	a
+		display: inline-block
+		padding: 10px
+		flex: 0 0 15%
+		text-align: center
+		background: transparent
+		border-bottom: 2px solid $color-light
+		color: $color-primary
+		transition: .3s
+		margin: 25px 0 15px 0
+		&.active
+			color: $color-primary
+			border-bottom: 2px solid $color-primary
+			font-weight: bold
+		&:hover
+			background: $color-lighter
+
+#nav-tabContent
+	.tab-pane
+		min-height: 550px
+
+.team-each
+	.img-box
+		position: relative
+		overflow: hidden
+	.theme-btn
+		position: absolute
+		top: 100%
+		cursor: pointer
+		left: 0
+	&:hover
+		.theme-btn
+			top: calc(100% - 53px)
+
+.mobile-menu
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: $color-primary
+	padding: 20px
+	overflow-y: auto
+	display: none
+
+	.mobile-header
+		display: flex
+		justify-content: space-between
+
+	ul
+		li
+			a
+				display: block
+				color: white
+				padding-left: 15px
+				padding: 15px
+				padding-right: 0
+			p
+				color: #eee
+				border-bottom: 1px solid rgba(255,255,255,0.5)
+				border-bottom: 1px solid rgba(255,255,255,0.5)
+				padding: 15px 0
+				font-size: 1.1rem
+				padding-left: 15px
+				&:first-child
+					border-top: 0
+			.nav-links
+				font-size: 1.2em
+				padding-left: 0
+				border-bottom: 1px solid rgba(255,255,255,0.5)
+				border-top: 1px solid rgba(255,255,255,0.5)
+				&:first-child
+					border-top: 0
+
+			&.has-dropdown
+
+				.nav-links, p
+					position: relative
+					&::before
+						content: "\f078"
+						font-family: 'Font Awesome 5 Free'
+						position: absolute
+						top: 50%
+						font-weight: 600
+						right: 0
+						transform: translateY(-50%)
+						transition: .3s
+					&.arrow-rotate
+						&::before
+							transform: translateY(-50%) rotate(180deg)
+				.dropdown-content
+					border-bottom: 1px solid rgba(255,255,255,0.5)
+					display: none
+					ul
+						border-bottom: 1px solid rgba(255,255,255,0.5)
+						li
+							position: relative
+							padding-left: 10px
+							&::before
+								content: "\f192"
+								font-family: 'Font Awesome 5 Free'
+								position: absolute
+								top: 50%
+								font-weight: 600
+								left: 0
+								transform: translateY(-50%)
+								font-size: .8rem
+								color: white
+					.dropdown-content
+						li
+							margin-left: 15px
+
+.why-cbm
+	.why-us
+		background: $color-primary
+		padding: 25px
+		*
+			color: white
+		li
+			margin-bottom: 10px
+			display: flex
+			span
+				opacity: .8
+				margin-right: 10px
+
+	.program-cards
+		.card-each
+			background-size: cover !important
+			transition: .4s
+
+			*
+				color: white
+			.program-title
+				font-size: 2rem
+			.program-list
+				p
+					margin-bottom: 5px
+			&.bachelor
+				background: url(../img/bachelor.png) no-repeat center
+			&.plus2
+				background: url(../img/plus2.jpg) no-repeat center
+			&.master
+				background: url(../img/master.png) no-repeat center
+
+.quote-section
+	.bg-img
+		display: flex 
+		align-items: center 
+		justify-content: center 
+		height: 550px 
+		background: url(../img/bg-2.jpg) center no-repeat
+		.inner-content
+			width: 100%
+			max-width: 650px
+			padding: 15px
+			text-align: center
+			position: relative
+			span
+				background: lighten($color-secondary, 20%)
+				display: inline-block
+				padding: 0 8px
+				border-radius: 8px
+			&::before
+				content: "\f10d"
+				position: absolute
+				top: -40px
+				opacity: .1
+				left: -10px
+				font-family: 'Font Awesome 5 Free'
+				font-weight: 600
+				font-size: 4rem
+			&::after
+				content: "\f10e"
+				position: absolute
+				bottom: -40px
+				opacity: .1
+				right: -10px
+				font-family: 'Font Awesome 5 Free'
+				font-weight: 600
+				font-size: 4rem
+			*
+				line-height: 35px
+

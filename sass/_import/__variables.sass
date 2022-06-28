@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap')
+
+// F.O.N.T.S
+$font-body:  'Source Sans Pro', sans-serif
+$font-heading: 'Lora', serif
+
+// C.O.L.O.R.S
+
+$color-dark-blue: #93242a
+$color-light-blue: lighten($color-dark-blue, 20%)
+$color-red: #e92026
+$color-font: #444
+
+// Color Light
+$color-light: #C3C3C3
+$color-lighter: #E8E8E8
+$color-lightest: #F9F9F9
+$color-transparent: rgba(255,255,255,0.2)
+$font-transparent: rgba(255,255,255,0.6)
+// Color Dark€
+$color-dark: #929292
+$color-darker: #626262
+$color-darkest: #272727
+// Color Primary
+// $color-primary: #7374BF
+// $color-primary: #FBEB58
+
+// $color-primary: #1A237E
+$color-primary: #14223d
+$color-primary-transparent: rgba(1, 66, 122, 0.8)
+$color-primary-light: lighten($color-primary, 5%)
+$color-primary-lighter: lighten($color-primary, 15%)
+$color-primary-lightest: lighten($color-primary, 25%)
+$color-primary-dark: darken($color-primary, 5%)
+$color-primary-darker: darken($color-primary, 15%)
+$color-primary-darkest: darken($color-primary, 25%)
+$color-primary-alt: #F9FBFF
+$color-primary-mid: #3d8bf1
+// Color Secondary
+// $color-secondary: #2576FD
+$color-secondary: #ea9e38
+$color-secondary-transparent: rgba(109, 19, 25, 0.9)
+$color-tertiary: #CC5052
+// C.o.l.o.r B.l.u.e
+$color-blue: #6599FF
+$color-secondary-light: lighten($color-secondary, 10%)
+$color-secondary-lighter: lighten($color-secondary, 20%)
+$color-secondary-lightest: lighten($color-secondary, 30%)
+// C.o.l.o.r G.r.e.e.n
+$color-green: #8BC34A
+$color-green-dark: darken($color-green, 5%)
+$color-green-darker: darken($color-green, 15%)
+$color-green-darkest: darken($color-green, 30%)
+// C.o.l.o.r O.r.a.n.g.e
+$color-orange: #FF9800
+$color-orange-dark: darken($color-orange, 5%)
+$color-orange-darker: darken($color-orange, 15%)
+$color-orange-darkest: darken($color-orange, 30%)
+// C.o.l.o.r R.e.d
+$color-red: #CC0000
+// C.o.l.o.r T.o.m.a.t.o
+$color-tomato: #AB3F1B
+// C.o.l.o.r F.a.c.e.b.o.o.k
+$color-facebook: #4267B2
+$color-twitter: #00acee
+// C.o.l.o.r G.o.o.g.l.e
+$color-google: #DB4437
+// C.h.a.t M.e.s.s.a.g.e B.a.c.k.g.r.o.u.n.d C.o.l.o.r
+// $color-chat-message-background-sent: #DDECEF
+// $color-chat-message-background-sent: mix($color-primary, #FFFFFF, 10%)
+$color-chat-message-background-sent: #3D8BF1
+$color-chat-message-background-received: #e0f0ff
+// C.o.l.o.r E.r.r.o.r
+$color-error: #dc3545
+// Color user active
+// $color-user-active: #8ec350
+$color-user-active: #2BAC76
+// Color Headings
+$color-heading: #191919
+
+// G.U.T.T.E.R
+// Gutter general
+$gutter-general: 16px
+// Gutter Half
+
+// B.O.R.D.E.R - R.A.D.I.U.S
+$radius-general: 2px
+$radius-medium: 3px
+$radius-large: 4px
+
+$form-control-border-radius: 3rem
+
+// B.O.R.D.E.R - C.O.L.O.R
+$form-control-border-color: darken($color-lighter, 2%)
+
+// W.I.D.T.H
+$rightPanelWidth: 22rem
+
+// H.E.I.G.H.T
+$chatNavHeight: 69px
+$rightPanelHeaderHeight: 52px
+$mainNavHeight: 69px
+
+// T.R.A.N.S.I.T.I.O.N
+// Transition duration general
+$transition-duration-general: 0.3s
+// Transition timing function general
+$transition-timing-function-general: ease-out
+// Transition general
+$transition-general: all $transition-duration-general $transition-timing-function-general
+// Transition duration fast
+$transition-duration-fast: 0.2s
+// Transition slide-in-out
+$transition-slide-in-out: $transition-duration-fast $transition-timing-function-general
+
+// Panel
+$panel-navigation-width: 280px
+
+$theme-bg: linear-gradient(to left , $color-primary, $color-secondary)
+$theme-bg-hover: linear-gradient(to right , $color-primary, $color-secondary)
+// $theme-bg: $color-secondary
+
+
+@font-face
+	font-family: "fonticons"
+	src: url("../fonts/fonticons.eot?v=2.0.0") 
+	src: url("../fonts/fonticons.eot?v=2.0.0#iefix") format("embedded-opentype")
+	src: url("../fonts/fonticons.woff?v=2.0.0") format("woff")
+	src: url("../fonts/fonticons.svg?v=2.0.0#fonticons") format("svg")
+	src: url("../fonts/fonticons.ttf?v=2.0.0") format("truetype") 
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: "simple-fonts"
+	src: url("../fonts/simple-fonts.eot?v=2.0.0") 
+	src: url("../fonts/simple-fonts.eot?v=2.0.0#iefix") format("embedded-opentype")
+	src: url("../fonts/simple-fonts.woff?v=2.0.0") format("woff")
+	src: url("../fonts/simple-fonts.svg?v=2.0.0#simple-fonts") format("svg")
+	src: url("../fonts/simple-fonts.ttf?v=2.0.0") format("truetype") 
+	font-weight: normal
+	font-style: normal
+
+  
+
+// ==================Fontawesome Icons =======================
+
+.icon-call::before
+	content: '\e600'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-mail::before
+	content: '\e086'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-facebook::before
+	content: '\e00b'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-twitter::before
+	content: '\e009'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-youtube::before
+	content: '\e008'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-instagram::before
+	content: '\e609'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-gps::before
+	content: '\f2e9'
+	font-family: 'fonticons'
+	font-style: normal
+
+
+.icon-briefcase::before
+	content: '\f3ed'
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-globe::before
+	content: '\f38c'
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-user::before
+	content: '\e005'
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-people::before
+	content: '\f47c'
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-bookmark::before
+	content: '\f3e9'
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-paperplane::before
+	content: '\f2c3'
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-arrow-up:before 
+	content: "\e607"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+
+.icon-heart:before 
+	content: "\e08a"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+
+.icon-screen:before 
+	content: "\e011"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+
+.icon-docs:before 
+	content: "\e040"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+
+.icon-map:before 
+	content: "\e033"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+
+.icon-lock:before 
+	content: "\e08e"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-search:before 
+	content: "\f2f5"
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-location:before 
+	content: "\e096"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+.icon-cash:before 
+	content: "\f316"
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-clock:before 
+	content: "\f26e"
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-graph:before 
+	content: "\f262"
+	font-family: 'fonticons'
+	font-style: normal
+
+
+.icon-date:before 
+	content: "\e075"
+	font-family: 'simple-fonts'
+	font-style: normal
+
+
+.icon-arrow-right:before 
+	content: "\e606"
+	font-family: 'simple-fonts'
+	font-style: normal
+	font-size:.9em
+
+
+.icon-bonfire:before
+	content: "\f315"
+	font-family: 'fonticons'
+	font-style: normal
+
+
+.icon-star:before
+	content: "\f2fc"
+	font-family: 'fonticons'
+	font-style: normal
+
+.icon-plus-circle:before
+	content: "\f216"
+	font-family: 'fonticons'
+	font-style: normal
+
+
+
+// ==================Fontawesome Icons =======================  

@@ -1,0 +1,241 @@
+/**************************************************************************************************/
+/****************************************** G.E.N.E.R.A.L ******************************************/
+/***************************************************************************************************/
+
+
+.divider
+	border: .8px solid $color-lighter
+	margin: 50px 0
+img
+	height: 100%
+	width: 100%
+	object-fit: cover
+
+.border-radius-0
+	border-radius: 0 !important
+
+.section-gap
+	padding: 80px 0
+	@media #{$small-only}
+		padding: 50px 0
+.high-section-gap
+	padding: 200px 0
+	
+.header-general
+	color: $color-heading
+	font-size: pxtorem(28)
+	font-weight: 500
+
+.header-general-md,
+.header-general-sm
+	@extend .header-general
+
+.header-general-md
+	font-size: pxtorem(26) !important
+
+.header-general-sm
+	font-size: pxtorem(22) !important
+
+.header-general-xs
+	font-size: pxtorem(18) !important
+
+.font-size-21
+	font-size: 21px
+.font-size-small
+	font-size: 12px
+.font-weight-500
+	font-weight: 500
+.text-muted
+	color: #8D8D8D !important
+.link-muted
+	color: $color-dark
+	text-decoration: none
+	&:hover
+		color: $color-darker
+		text-decoration: none
+
+.link-secondary
+	color: $color-secondary
+
+.btn-icon
+	font-size: .825rem
+
+.btn-icon-left
+	margin-right: .75rem
+
+.btn-icon-right
+	margin-left: .75rem
+
+.validation-message
+	display: block
+	font-size: 80%
+	width: 100%
+	margin-top: .25rem
+	text-align: left
+
+.validation-message-error
+	color: $color-error
+
+.validation-message-success
+	color: darken($color-green, 20%)
+.input-group
+	.validation-message
+		padding-left: 2.5rem
+
+.resend-link-message
+	display: block
+	.resend-link
+		color: $color-primary-darkest
+		cursor: pointer
+		&:hover
+			text-decoration: underline
+
+.btn-group-inline
+	@include display-flex
+	.btn
+		&:not(:last-child)
+			margin-right: .375rem
+.theme-color
+	color: $color-primary
+.sec-color
+	color: $color-secondary
+	
+.bg-none
+	background: none !important
+.text-shadow
+	text-shadow: 1px 1px 1px lightgrey
+
+.social-icons
+	@include display-flex
+	@include align-items(center)
+	.icon
+		padding: 8px 10px
+		i
+			color: white
+			font-size: 1.1rem
+
+.scroll-to-top	
+	position: absolute
+	z-index: 999
+	bottom: 50px
+	right: 20px
+	padding: 10px
+	width: 50px
+	height: 50px
+	line-height: 50px
+	@include border-radius(8px)
+	text-align: center
+	color: white
+
+.facebook-bg-color
+	background: $color-facebook
+.twitter-bg-color
+	background: $color-twitter
+.youtube-bg-color
+	background: $color-tomato	
+
+		
+/***************************************************************************************************/
+/****************************************** G.E.N.E.R.A.L ******************************************/
+/**************************************************************************************************/
+
+
+.theme-btn
+	display: inline-block
+	color: white
+	background: $color-primary
+	padding: 8px 20px
+	border-radius: 6px
+	transition: .3s
+	letter-spacing: 1px
+	font-size: .9rem
+
+	&.big
+		padding: 9px 30px
+		border-radius: 0
+
+	&.darken
+		background: darken($color-primary, 10%)
+		&:hover
+			background: $color-primary	
+	&:hover
+		background: darken($color-primary, 10%)
+		color: white	
+
+.outline-btn
+	display: inline-block
+	padding: 8px 15px 
+	transition: .3s
+	&.white
+		background: none
+		color: white
+		border: 1px solid white
+
+		&:hover
+			background: white
+			color: black
+
+.dash-line
+	position: relative
+	padding-bottom: 15px
+	display: inline-block
+	&:before
+		position: absolute
+		bottom: 0
+		content: ''
+		left: 0
+		background: $color-secondary
+		height: 3px
+		width: 20%	
+
+.text-pri
+	color: $color-primary		
+
+.owl-dots
+	.owl-dot
+		outline: none
+		&.active
+			span
+				background: $color-primary !important		
+.to-top
+	position: fixed
+	bottom: 5px
+	right: 8px
+	display: none
+	
+	a
+		color: $color-primary	
+		padding: 10px
+		display: inline-block
+
+		&:hover
+			small
+				font-weight: bold
+				transition: .3s
+
+::-webkit-scrollbar
+	width: 12px
+
+::-webkit-scrollbar-thumb
+	border-radius: 10px
+	background: darken( $color-light, 10%)				
+
+
+.bread
+	padding: 170px 0 80px 0
+	background: linear-gradient( rgba(0,0,0,0.7) , rgba(0,0,0,0.7) ),url(../img/std-life.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+	.title
+		color: white
+
+.border-bottom
+	border-bottom: 1px solid $color-lighter		
+
+.border-right
+	border-right: 1px solid $color-lighter		
+			
+.circular-btn
+	@include border-radius(50px)

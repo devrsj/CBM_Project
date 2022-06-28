@@ -1,0 +1,182 @@
+/***************************************************************************************************/
+/*************************************** C.O.N.T.E.X.T.U.A.L ***************************************/
+/***************************************************************************************************/
+
+// FLOAT
+.clear-float,
+.clear-fix,
+.clear
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+
+.float-left
+	float: left
+
+.float-right
+	float: right
+
+// HEIGHT AND WIDTH
+.fluid-height
+	height: 100%
+
+.fluid-height-min
+	min-height: 100%
+
+.fluid-width
+	width: 100% !important
+
+.fluid-width-min
+	min-width: 100%	
+
+// MARGIN AND PADDING
+.no-margin,
+.m-0
+	margin: 0 !important
+
+.no-padding,
+.p-0
+	padding: 0 !important
+
+// TEXT AND ALIGNMENT
+.text-info
+	display: block
+	font-size: 12px
+	margin-top: .5rem
+
+.text-left,
+.align-left
+	text-align: left
+
+.text-center,
+.align-center
+	text-align: center
+
+.text-right,
+.align-right
+	text-align: right
+
+.text-ellipsis
+	display: block
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+.uppercase,
+.text-uppercase
+	text-transform: uppercase
+
+.lowercase,
+.text-lowercase
+	text-transform: lowercase
+
+.capitalize,
+.text-capitalize
+	text-transform: capitalize
+
+// DISPLAY
+.hidden
+	display: none !important
+
+.invisible
+	visibility: hidden !important
+	opacity: 0 !important
+
+.visible
+	visibility: visible !important
+	opacity: 1 !important
+
+.remove,
+.hide
+	display: none
+
+.d-flex
+	@include display-flex
+
+.d-flex-center
+	@include display-flex
+	@include justify-content(center)
+	@include align-items(center)
+
+// BACKGROUND AND COLOR
+.color-primary
+	color: $color-primary
+
+.color-success
+	color: $color-green-darker
+
+.color-error
+	color: $color-red
+
+.bg-lightest
+	background-color: lighten($color-lightest, 2%)
+
+// GRID
+.stretch
+	margin-right: -.75rem
+	margin-left: -.75rem
+
+// MISC
+.img-fluid
+	display: block
+	max-width: 100%
+	height: auto
+
+.img-centered
+	display: block
+	max-width: 100%
+	max-height: 100%
+	margin: auto
+
+.cursor-pointer
+	cursor: pointer
+	padding: 0 !important
+
+ul.clean
+	list-style: none
+	margin: 0
+	padding: 0
+
+.relative
+	position: relative
+
+.transition-general
+	@include transition($transition-general)
+
+.box-shadow-general
+	@include box-shadow(0 0 .5rem #E8E8E8)
+
+// Links
+.link-general
+	color: $color-primary
+	&:hover
+		color: darken($color-primary, 5%)
+
+.cursor
+	cursor: pointer
+
+//Media query 
+.p-sm-0
+	@media #{$small-only}
+		padding: 0 !important
+.m-sm-0
+	@media #{$small-only}
+		margin: 0 !important
+.px-sm-2
+	@media #{$small-only}
+		padding-left: 20px !important
+		padding-right: 20px !important
+.my-sm-1
+	@media #{$small-only}
+		margin: .25rem 0 !important
+
+.w-sm-100
+	@media #{$small-only}
+		width: 100% !important
+
+/***************************************************************************************************/
+/*************************************** C.O.N.T.E.X.T.U.A.L ***************************************/
+/***************************************************************************************************/

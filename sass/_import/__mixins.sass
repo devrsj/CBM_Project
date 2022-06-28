@@ -1,0 +1,199 @@
+@mixin box-sizing($box-sizing-type...)
+	-webkit-box-sizing: $box-sizing-type
+	-moz-box-sizing: $box-sizing-type
+	box-sizing: $box-sizing-type
+
+@mixin box-shadow($box-shadow-effect...)
+	-webkit-box-shadow: $box-shadow-effect
+	-moz-box-shadow: $box-shadow-effect
+	box-shadow: $box-shadow-effect
+
+@mixin border-radius($border-radius-size...)
+	-webkit-border-radius: $border-radius-size
+	-moz-border-radius: $border-radius-size
+	border-radius: $border-radius-size
+
+@mixin justify-content($justify-content-type...)
+	-webkit-justify-content: $justify-content-type
+	-moz-justify-content: $justify-content-type
+	justify-content: $justify-content-type
+
+@mixin user-select($user-select-effect...)
+	-webkit-user-select: $user-select-effect
+	-moz-user-select: $user-select-effect
+	-ms-user-select: $user-select-effect
+	user-select: $user-select-effect
+
+@mixin transition($transition-effect...)
+	-webkit-transition: $transition-effect
+	-moz-transition: $transition-effect
+	transition: $transition-effect
+
+@mixin transform($transform-effect...)
+	-webkit-transform: $transform-effect
+	-moz-transform: $transform-effect
+	transform: $transform-effect
+
+@mixin opacity($opacity)
+	opacity: $opacity
+	$opacity-ie: $opacity * 100
+	filter: alpha(opacity=$opacity-ie)
+
+@mixin keyframes($animation-name)
+	@-webkit-keyframes #{$animation-name}
+		@content
+	@-moz-keyframes #{$animation-name}
+		@content
+	@-ms-keyframes #{$animation-name}
+		@content
+	@-o-keyframes #{$animation-name}
+		@content
+	@keyframes #{$animation-name}
+		@content
+
+@mixin animation($str)
+	-webkit-animation: #{$str}
+	-moz-animation: #{$str}
+	-ms-animation: #{$str}
+	-o-animation: #{$str}
+	animation: #{$str}
+
+@mixin flex($str)
+	-webkit-box-flex: #{$str}
+	-webkit-flex: #{$str}
+	-ms-flex: #{$str}
+	flex: #{$str}
+
+@mixin display-flex
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+
+@mixin display-inline-flex
+	display: -webkit-inline-flex
+	display: -ms-inline-flex
+	display: inline-flex
+
+@mixin flex-direction($str)
+	-webkit-flex-direction: #{$str}
+	-moz-flex-direction: #{$str}
+	-ms-flex-direction: #{$str}
+	-o-flex-direction: #{$str}
+	flex-direction: #{$str}
+
+@mixin flex-grow($str)
+	-webkit-flex-grow: #{$str}
+	-moz-flex-grow: #{$str}
+	-ms-flex-grow: #{$str}
+	-o-flex-grow: #{$str}
+	flex-grow: #{$str}
+
+@mixin flex-flow($str)
+	-webkit-flex-flow: #{$str}
+	-moz-flex-flow: #{$str}
+	-ms-flex-flow: #{$str}
+	-o-flex-flow: #{$str}
+	flex-flow: #{$str}
+
+@mixin flex-basis($str)
+	-webkit-flex-basis: #{$str}
+	-moz-flex-basis: #{$str}
+	-ms-flex-basis: #{$str}
+	-o-flex-basis: #{$str}
+	flex-basis: #{$str}
+
+@mixin flex-wrap($str)
+	-webkit-flex-wrap: #{$str}
+	-moz-flex-wrap: #{$str}
+	-ms-flex-wrap: #{$str}
+	-o-flex-wrap: #{$str}
+	flex-wrap: #{$str}
+
+@mixin align-self($str)
+	-webkit-align-self: #{$str}
+	-moz-align-self: #{$str}
+	-ms-align-self: #{$str}
+	-o-align-self: #{$str}
+	align-self: #{$str}
+
+@mixin align-items($str)
+	-webkit-align-items: #{$str}
+	-moz-align-items: #{$str}
+	-ms-align-items: #{$str}
+	-o-align-items: #{$str}
+	align-items: #{$str}
+
+@mixin linear-gradient($angle, $color-stops...)
+	$_angle-with-vendor-prefix: ""
+	$_angle: ""
+	@if $angle == "to top" or $angle == "bottom"
+		$_angle-with-vendor-prefix: bottom
+		$_angle: to top
+	@else if $angle == "to right" or $angle == "left"
+		$_angle-with-vendor-prefix: left
+		$_angle: to right
+	@else if $angle == "to bottom" or $angle == "top"
+		$_angle-with-vendor-prefix: top
+		$_angle: to bottom
+	@else if $angle == "to left" or $angle == "right"
+		$_angle-with-vendor-prefix: right
+		$_angle: to left
+	@else if $angle == "to top right" or $angle == "bottom left"
+		$_angle-with-vendor-prefix: bottom left
+		$_angle: to top right
+	@else if $angle == "to bottom right" or $angle == "top left"
+		$_angle-with-vendor-prefix: top left
+		$_angle: to bottom right
+	@else if $angle == "to bottom left" or $angle == "top right"
+		$_angle-with-vendor-prefix: top right
+		$_angle: to bottom left
+	@else if $angle == "to top left" or $angle == "bottom right"
+		$_angle-with-vendor-prefix: bottom right
+		$_angle: to top left
+	@else
+		$_angle-with-vendor-prefix: $angle
+		$_angle: $angle
+
+	background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops)
+	background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops)
+	background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops)
+	background: linear-gradient($_angle, $color-stops)
+
+@mixin radial-gradient($from, $to)
+	background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to))
+	background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background: radial-gradient(center, circle cover, $from 0%, $to 100%)
+	background-color: $from
+
+@mixin selection
+	::-moz-selection
+		background-color: $color-primary
+		color: #FFFFFF
+	::selection
+		background-color: $color-primary
+		color: #FFFFFF
+
+// @mixin rem($property, $values)
+// 	$px: ()
+// 	$rem: ()
+// 	@each $value in $values
+// 		@if $value == 0 or $value == auto
+// 			$px: append($px, $value);
+// 			$rem: append($rem, $value);
+// 		@else
+// 			$unit: unit($value);
+// 			$val: parseInt($value);
+// 			@if $unit == "px"
+// 				$px: append($px, $value)
+// 				$rem: append($rem, ($val / 16 + rem))
+// 			@if $unit == "rem"
+// 				$px: append($px, ($val * 16 + px))
+// 				$rem: append($rem, $value)
+// 	@if $px == $rem
+// 		#{$property}: $px
+// 	else
+// 		#{$property}: $px
+// 		#{$property}: $rem
